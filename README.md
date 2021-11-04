@@ -14,7 +14,7 @@ The [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 ## Setup
 * Just install the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 * copy/download the script and put it whereever you want to use it from the command line
-* edit the credentials (user email, user password, SPIN) for your volkswagen account in the script
+* edit the credentials (user email, user password, SPIN) for your myvolkswagen account in the script
 
 ## Usage
 start from command line: 
@@ -31,6 +31,7 @@ python3 carnet_cli.py <vin> setwindowheating <start/stop>
 python3 carnet_cli.py <vin> setlock <lock/unlock>"
 ```
 (vin: Vehicle ID, true: without external power; false: with charging cable only)
+All output data are printed out in json format
 
 ## Features
 Currently the following actions are implemented:
@@ -43,8 +44,11 @@ Currently the following actions are implemented:
 * setwindowheating     - start or stop the window heating
 * setlock              - lock or unlock your car (only when activated, SPIN needed)
 
+In addition to the volkswagencarnet library the script gets the newest longtermstatistics.
+
 ## Example for usage
 ![Nodered example](./example.png)
+of course you have to do something in nodered to get such a dashboard
 
 ## Acknowledgements
 - This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
