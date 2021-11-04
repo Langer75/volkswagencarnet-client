@@ -11,7 +11,7 @@ Commandline script to interact with volkswagencarnet library
 The volkswagencarnet library (by robinostlund) retrieves statistics about your Volkswagen from the Volkswagen Carnet online service. Also some actions can be requested via this library. This simple python script allows to use the library via command line and parameter lists. In that way it can be used in an easy way e.g. in nodered with the exec node.
 
 ## Setup
-* Just install the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library by robinostlund
+* Just install the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 * copy/download the script and put it whereever you want to use it from the command line
 
 ## Usage
@@ -31,9 +31,9 @@ python3 carnet_cli.py <vin> setlock <lock/unlock>"
 (vin: Vehicle ID, true: without external power; false: with charging cable only)
 
 ## Acknowledgements
-- This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet)
-- Many thanks to [robinostlund](https://github.com/robinostlund) and all people that have contribute to the volkswagencarnet library
+- This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
+- Many thanks to [robinostlund](https://github.com/robinostlund) and all people that have contribute to the library
   
 ## Project Status
-It was developed to use the python library in nodered. All basic (from my point of view) functions are implemented. However I have tested it with an eGolf only. Feel free to use it or improve it for combustion cars or other functionalities available in the volkswagencarnet library. No licence, public domain, no guarantees.  
+It was developed to use the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library in nodered. All basic (from my point of view) functions are implemented. However I have tested it only with an eGolf. Feel free to use it or improve it for combustion cars or other functionalities available in the volkswagencarnet library. No licence, public domain, no guarantees.  
   
