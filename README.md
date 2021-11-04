@@ -17,7 +17,7 @@ The volkswagencarnet library (by robinostlund) retrieves statistics about your V
 * edit the credentials (user email, user password, SPIN) for your volkswagen account in the script
 
 ## Usage
-start from th command line: 
+start from command line: 
 ```
 python3 carnet_cli.py <vin> <action> <action parameters>
 e.g.
@@ -34,16 +34,18 @@ python3 carnet_cli.py <vin> setlock <lock/unlock>"
 
 ## Features
 Currently the following actions are implemented:
-* update               - get all available data of the car identified by te VIN (from the backend only)
+* update               - get all available data of the car identified by te VIN (from the VW backend only)
 * setrefresh           - force the vehicle data update directly from the car
 * setcharger           - start or stop charging
 * setchargercurrent    - set the chargingcurrent
 * setclimatisationtemp - set the targettemperature for climatisation
-* setclimatisation     - start or stop climatisation
+* setclimatisation     - start or stop climatisation (for auxiliary heater SPIN needed)
+* setwindowheating     - start or stop the window heating
+* setlock              - lock or unlock your car (only when activated, SPIN needed)
 
 ## Acknowledgements
 - This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
-- Many thanks to [robinostlund](https://github.com/robinostlund) and all people that have contribute to the library
+- Many thanks to [robinostlund](https://github.com/robinostlund) and all people that contribute to the library
   
 ## Project Status
 It was developed to use the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library in nodered. All basic (from my point of view) functions are implemented. However I have tested it only with an eGolf. Feel free to use it or improve it for combustion cars or other functionalities available in the volkswagencarnet library. No licence, public domain, no guarantees.  
