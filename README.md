@@ -43,6 +43,9 @@ Currently the following actions are implemented:
 * setwindowheating     - start or stop the window heating
 * setlock              - lock or unlock your car (only when activated, SPIN needed)
 
+## Example for usage
+![Nodered example](./example.png)
+
 ## Acknowledgements
 - This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 - Many thanks to [robinostlund](https://github.com/robinostlund) and all people that contribute to the library
