@@ -1,5 +1,5 @@
 # volkswagencarnet-client
-Commandline script to interact with [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
+command line script to interact with [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -9,7 +9,7 @@ Commandline script to interact with [volkswagencarnet](https://github.com/robino
 * [Project Status](#project-status)
  
 ## General Information
-The volkswagencarnet library (by robinostlund) retrieves statistics about your Volkswagen from the Volkswagen Carnet online service. Also some actions can be requested via this library. This simple python script allows to use the library via command line and parameter lists. In that way it can be used in an easy way e.g. in nodered with the exec node.
+The [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library retrieves statistics about your Volkswagen car from the Volkswagen Carnet online service. Also some actions can be requested via this library. This simple python script allows to use the library via command line and parameter lists. In that way it can be used in an easy way e.g. in nodered with the exec node.
 
 ## Setup
 * Just install the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
