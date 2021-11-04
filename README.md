@@ -6,6 +6,7 @@ Commandline script to interact with [volkswagencarnet](https://github.com/robino
 * [Setup](#setup)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
+* [Project Status](#project-status)
  
 ## General Information
 The volkswagencarnet library (by robinostlund) retrieves statistics about your Volkswagen from the Volkswagen Carnet online service. Also some actions can be requested via this library. This simple python script allows to use the library via command line and parameter lists. In that way it can be used in an easy way e.g. in nodered with the exec node.
@@ -13,6 +14,7 @@ The volkswagencarnet library (by robinostlund) retrieves statistics about your V
 ## Setup
 * Just install the [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 * copy/download the script and put it whereever you want to use it from the command line
+* edit the credentials (user email, user password, SPIN) for your volkswagen account in the script
 
 ## Usage
 start from th command line: 
@@ -29,6 +31,15 @@ python3 carnet_cli.py <vin> setwindowheating <start/stop>
 python3 carnet_cli.py <vin> setlock <lock/unlock>"
 ```
 (vin: Vehicle ID, true: without external power; false: with charging cable only)
+
+## Features
+Currently the following actions are implemented:
+* update               - get all available data of the car identified by te VIN (from the backend only)
+* setrefresh           - force the vehicle data update directly from the car
+* setcharger           - start or stop charging
+* setchargercurrent    - set the chargingcurrent
+* setclimatisationtemp - set the targettemperature for climatisation
+* setclimatisation     - start or stop climatisation
 
 ## Acknowledgements
 - This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
