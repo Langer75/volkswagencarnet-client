@@ -1,4 +1,4 @@
-# volkswagen-carnet-client
+# volkswagencarnet-client
 Commandline script to interact with [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 
 ## Table of Contents
