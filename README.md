@@ -1,5 +1,5 @@
 # volkswagen-carnet-client
-Commandline script to interact with volkswagencarnet library
+Commandline script to interact with [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
 
 ## Table of Contents
 * [General Info](#general-information)
