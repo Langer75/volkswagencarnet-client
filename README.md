@@ -49,7 +49,7 @@ In addition to the volkswagencarnet library the script gets the newest longterms
 
 ## Example for usage
 ![Nodered example](./example.png)
-of course you have to do something in nodered to get such a dashboard
+of course you have to do something in nodered to get such a dashboard ;-)
 
 ## Acknowledgements
 - This project was inspired by [volkswagencarnet](https://github.com/robinostlund/volkswagencarnet) library
