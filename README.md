@@ -5,6 +5,7 @@ command line script to interact with [volkswagencarnet](https://github.com/robin
 * [General Info](#general-information)
 * [Setup](#setup)
 * [Usage](#usage)
+* [Example](#example-for-usage)
 * [Acknowledgements](#acknowledgements)
 * [Project Status](#project-status)
  
