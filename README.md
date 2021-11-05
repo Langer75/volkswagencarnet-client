@@ -37,7 +37,7 @@ All output data are printed out in json format
 
 ## Features
 Currently the following actions are implemented:
-* update               - get all available data of the car identified by the VIN (from the VW backend only)
+* update               - get all available data of the car identified by the VIN (from VW backend only)
 * setrefresh           - force the vehicle data update directly from the car
 * setcharger           - start or stop charging
 * setchargercurrent    - set the chargingcurrent
