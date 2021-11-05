@@ -32,6 +32,7 @@ python3 carnet_cli.py <vin> setwindowheating <start/stop>
 python3 carnet_cli.py <vin> setlock <lock/unlock>"
 ```
 (vin: Vehicle ID, true: without external power; false: with charging cable only)
+
 All output data are printed out in json format
 
 ## Features
