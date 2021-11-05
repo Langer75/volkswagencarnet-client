@@ -46,7 +46,7 @@ Currently the following actions are implemented:
 * setwindowheating     - start or stop the window heating
 * setlock              - lock or unlock your car (only when activated, SPIN needed)
 
-In addition to the volkswagencarnet library the script gets the newest longtermstatistics.
+In addition to the volkswagencarnet library the script gets the newest longtermtripstatistics.
 
 ## Example for usage
 ![Nodered example](./example.png)
