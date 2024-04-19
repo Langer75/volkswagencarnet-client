@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
 # command line client to use the python library for volkswagen carnet by Robin Ostlund
 # https://github.com/robinostlund/volkswagencarnet
@@ -9,9 +9,9 @@
 #   python3 carnet_cli.py <vin> update
 #   python3 carnet_cli.py <vin> setrefresh
 #   python3 carnet_cli.py <vin> setcharger <start/stop> 
-#   python3 carnet_cli.py <vin> setchargercurrent <#ampere>
-#   python3 carnet_cli.py <vin> setclimatisationtemp <#temperature>
-#   python3 carnet_cli.py <vin> setclimatisation <electric/auxiliary> <#temperature> <true/false> (true: without external power; false: with charging cable only)
+#   python3 carnet_cli.py <vin> setchargercurrent <ampere>
+#   python3 carnet_cli.py <vin> setclimatisationtemp <temperature>
+#   python3 carnet_cli.py <vin> setclimatisation <electric> <temperature/auxiliary> <true/false> (true: without external power; false: with charging cable only)
 #   python3 carnet_cli.py <vin> setwindowheating <start/stop>
 #   python3 carnet_cli.py <vin> setlock <lock/unlock>
 
@@ -39,8 +39,8 @@ from json import dumps as to_json
 import aiohttp
 from bs4 import BeautifulSoup
 from base64 import b64encode
-from vw_utilities import read_config, json_loads
 from vw_vehicle import Vehicle
+from vw_utilities import read_config, json_loads
 
 from aiohttp import ClientSession, ClientTimeout
 from aiohttp.hdrs import METH_GET, METH_POST
@@ -51,11 +51,9 @@ from vw_const import (
     HEADERS_SESSION,
     HEADERS_AUTH,
     BASE_SESSION,
+    BASE_API,
     BASE_AUTH,
     CLIENT,
-    XCLIENT_ID,
-    XAPPVERSION,
-    XAPPNAME,
     USER_AGENT,
     APP_URI,
 )
@@ -135,16 +133,10 @@ async def main():
                     str_a = "{\"VIN\":\""+vin+"\",\"last_request\":\"" + action + "\",\"response\":\"" + str(response) + "\""
                     for instrument in vehicle.dashboard().instruments:
                         if instrument.name == "Position":
-                            str_a +=   ",\"Pos_x\":" + str(instrument.str_state[0]) + ",\"Pos_y\":" + str(instrument.str_state[1]) + ",\"Pos_time\":\"" + str(instrument.str_state[2]) +  "\""
-                        else:    
-                            str_a +=   ",\"" + instrument.name + "\":\"" + instrument.str_state + "\""                            
-                    await connection.set_token('vwg')
-                    response = await connection.get(f'fs-car/bs/tripstatistics/v1/{BRAND}/{connection._session_country}/vehicles/$vin/tripdata/longTerm?newest',vin)
-                    if response.get('tripData', {}):
-                         response["tripData"]["timestamp"]=str(response["tripData"]["timestamp"])
-                    response = json.dumps(response)
-                    response = response.lstrip("{")
-                    str_a += "," + response
+                            str_a +=   ",\"Pos_x\":\"" + str(instrument.str_state[0]) + "\",\"Pos_y\":\"" + str(instrument.str_state[1]) + "\",\"Pos_time\":\"" + str(instrument.str_state[2]) +  "\""
+                        else: 
+                            str_a +=   ",\"" + instrument.name + "\":\"" + str(instrument.str_state) + "\""                            
+                    str_a += "}"
                     print(f"{str_a}")
         await connection.terminate()            
 
